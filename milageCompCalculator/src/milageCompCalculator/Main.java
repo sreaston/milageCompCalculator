@@ -53,7 +53,7 @@ public class Main extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		 if (e.getSource() == button) {
-
+	//this method pulls the value of variables from the text input boxes and declares others for use in computing the profit		 
 			 	double compensation;
 			 	double gallonsUsed;
 			 	double tripCostGross;
@@ -67,7 +67,11 @@ public class Main extends JFrame implements ActionListener {
 				tripCostGross = (gallonsUsed * gasPrice);
 				compensation = (compensationRate * distance);
 				profit = (compensation - tripCostGross);
-		 
+				//for testing purposes to make sure it works
+				System.out.println("Gallons used: " + gallonsUsed);
+				System.out.println("Cost to drive: " + tripCostGross);
+				System.out.println("Gross compensation: " + compensation);
+				System.out.println("Profit: " + profit);
 		 }
 		 
 	    
