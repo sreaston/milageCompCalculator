@@ -53,7 +53,7 @@ public class Main extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		 if (e.getSource() == button) {
-	//this method pulls the value of variables from the text input boxes and declares others for use in computing the profit		 
+	//this method pulls the value of variables from the text input boxes and declares others for use in computing the profit.		 
 			 	double compensation;
 			 	double gallonsUsed;
 			 	double tripCostGross;
