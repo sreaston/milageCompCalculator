@@ -1,5 +1,6 @@
 package milageCompCalculator;
 import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Scanner;
@@ -16,6 +17,10 @@ public class Main extends JFrame implements ActionListener {
 	private JTextField gasPriceField;
 	private JTextField distanceField;
 	private JTextField compensationRateField;
+	private JLabel gallonsUsedLabel;
+	private JLabel tripCostGrossLabel;
+	private JLabel compensationLabel;
+	private JLabel profitLabel;
 	
 	private JButton button;
 	
@@ -23,7 +28,7 @@ public class Main extends JFrame implements ActionListener {
 		setTitle("Milage Pay Calculator");
         setSize(300, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new FlowLayout());
+        setLayout(new GridLayout(0, 1)); // 0 rows, 1 column
 
         // Create the first TextField
         carMPGField = new JTextField(20);
@@ -47,7 +52,21 @@ public class Main extends JFrame implements ActionListener {
         button = new JButton("Submit");
         button.addActionListener(this);
         add(button);
+	
+        gallonsUsedLabel = new JLabel("Gallons used: ");
+        add(gallonsUsedLabel);
+
+        tripCostGrossLabel = new JLabel("Cost to drive: ");
+        add(tripCostGrossLabel);
+
+        compensationLabel = new JLabel("Gross compensation: ");
+        add(compensationLabel);
+
+        profitLabel = new JLabel("Profit: ");
+        add(profitLabel);
+
 	}
+	
 	
 	
 	@Override
@@ -68,10 +87,10 @@ public class Main extends JFrame implements ActionListener {
 				compensation = (compensationRate * distance);
 				profit = (compensation - tripCostGross);
 				//for testing purposes to make sure it works
-				System.out.println("Gallons used: " + gallonsUsed);
-				System.out.println("Cost to drive: " + tripCostGross);
-				System.out.println("Gross compensation: " + compensation);
-				System.out.println("Profit: " + profit);
+		        gallonsUsedLabel.setText("Gallons used: " + gallonsUsed);
+		        tripCostGrossLabel.setText("Cost to drive: " + tripCostGross);
+		        compensationLabel.setText("Gross compensation: " + compensation);
+		        profitLabel.setText("Profit: " + profit);
 		 }
 		 
 	    
