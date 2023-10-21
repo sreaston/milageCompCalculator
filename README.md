@@ -1,1 +1,1 @@
-This is a small program to calculate how much money you make from driving based on the amount of money you are compensated per mile.
+This is a small program to calculate how much money you make from driving based on the amount of money you are compensated per mile, the MPG of the car you are driving and the price of gas per gallon.
